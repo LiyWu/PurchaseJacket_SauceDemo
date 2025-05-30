@@ -16,6 +16,7 @@ class DashboardPage {
   }
 
   async verifyDashboardDisplayed(){
+    await this.appLogo.waitFor();
     expect(this.appLogo).toHaveText('Swag Labs');
   }
 
@@ -26,12 +27,13 @@ class DashboardPage {
   async navigateToOrders()
   {
     await this.cartBtn.click();
-    await this.page.waitForLoadState('networkidle');
+   await this.page.waitForLoadState('load');
   }
 
   async logout()
   {
     await this.menuBtn.click();
+    await this.page.waitForLoadState('load');
     await this.logoutBtn.click();
   }
 }

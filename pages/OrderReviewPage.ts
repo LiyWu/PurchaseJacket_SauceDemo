@@ -26,7 +26,7 @@ class OrderReviewPage{
     async clickFinish()
     {
         await this.finishBtn.click();
-        await this.page.waitForLoadState('networkidle');
+        await this.page.waitForLoadState('load');
     }
 }
 

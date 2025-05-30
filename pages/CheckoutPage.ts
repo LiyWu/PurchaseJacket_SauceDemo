@@ -31,7 +31,7 @@ class checkoutPage{
     async ClickContinue()
     {
         await this.continueBtn.click();
-        await this.page.waitForLoadState('networkidle');
+        await this.page.waitForLoadState('load');
     }
 }
 

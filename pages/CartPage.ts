@@ -19,7 +19,7 @@ class CartPage{
     async checkout()
     {
         await this.checkoutBtn.click();
-        await this.page.waitForLoadState('networkidle');
+        await this.page.waitForLoadState('load');
     }
 }
 
